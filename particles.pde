@@ -27,9 +27,11 @@ void draw(){
     }
     
     for (int j=1; j<=dotsMax; j++){
-      if (sqrt(sq(dotsX[j]-dotsX[i])+sq(dotsY[j]-dotsY[i])) <=100){
+      if (sqrt(sq(dotsX[j]-dotsX[i])+sq(dotsY[j]-dotsY[i])) <=150){
         strokeWeight(1);
-        stroke(225, 100, 100);
+        stroke(225-(1.5*sqrt(sq(dotsX[j]-dotsX[i])+sq(dotsY[j]-dotsY[i]))),
+        100-(1.5*sqrt(sq(dotsX[j]-dotsX[i])+sq(dotsY[j]-dotsY[i]))), 
+        100-(1.5*sqrt(sq(dotsX[j]-dotsX[i])+sq(dotsY[j]-dotsY[i]))));
         line(dotsX[i], dotsY[i], dotsX[j], dotsY[j]);
       }
     }
